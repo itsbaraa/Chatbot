@@ -1,0 +1,8 @@
+cohere
+flask
+flask-socketio
+flask-cors
+elevenlabs
+numpy
+scipy
+websockets
