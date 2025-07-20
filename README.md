@@ -1,6 +1,6 @@
 # Chatbot
 
-This project is a real-time conversational chatbot with a web interface to interact with users using Cohere for responses and ElevenLabs for TTS.
+This project is a real-time conversational chatbot with a web interface to interact with users using Cohere for responses and ElevenLabs for high-quality text-to-speech voices.
 
 <img width="1659" height="1303" alt="image" src="https://github.com/user-attachments/assets/9ab34162-3b3e-4084-a75f-1670008f4864" />
 
