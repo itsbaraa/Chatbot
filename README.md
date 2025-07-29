@@ -34,14 +34,18 @@ Before setting up the project, ensure you have the following:
   - Cohere API key (for the `command-r7b-arabic-02-2025` model used for Arabic language processing)
 - **Dependencies**:
   - All required Python packages are listed in `requirements.txt`
-  - Install using: `pip install -r requirements.txt`
+
 
 ## Setup
 1- Clone the repository
+
+2- install the required libraries: `pip install -r requirements.txt`
+
+3- Insert the Cohere and ElevenLabs API keys in `Chatbot.py`
+
+4- Run the real-time speech-to-text server: `python RealtimeSTT_Server.py`
   
-2- Run the real-time speech-to-text server: `python RealtimeSTT_Server.py`
-  
-3- Run the chatbot backend: `python Chatbot.py` 
+5- Run the chatbot backend: `python Chatbot.py` 
 
 ## Showcase
 
