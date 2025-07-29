@@ -14,19 +14,19 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 class VoiceChatbot:
     def __init__(self):
-        self.cohere = cohere.Client("Cohere_API_Key")  # Replace with your actual Cohere API key
-        self.elevenlabs = ElevenLabs(api_key="ElevenLabs_API_Key")  # Replace with your actual ElevenLabs API key
+        self.cohere = cohere.Client("nhh1rhpwchYSx0t8aZGHCEZlYWlSkpLFPk8oHp3W")  # Replace with your actual Cohere API key
+        self.elevenlabs = ElevenLabs(api_key="sk_fbfeac9c967e1cd58908f9e8bb402bd3f31ebe44ca060cb2")  # Replace with your actual ElevenLabs API key
 
     def speak(self, text):
         try:
-            audio = self.elevenlabs.text_to_speech.convert(voice_id="A9ATTqUUQ6GHu0coCz8t",text=text,model_id="eleven_turbo_v2_5")
+            audio = self.elevenlabs.text_to_speech.convert(voice_id="rPNcQ53R703tTmtue1AT",text=text,model_id="eleven_turbo_v2_5")
             play(b"".join(audio))
         except Exception as e:
             print(f"Speech error: {e}")
     
     def generate_audio(self, text):
         try:
-            audio = self.elevenlabs.text_to_speech.convert(voice_id="A9ATTqUUQ6GHu0coCz8t",text=text,model_id="eleven_turbo_v2_5")
+            audio = self.elevenlabs.text_to_speech.convert(voice_id="rPNcQ53R703tTmtue1AT",text=text,model_id="eleven_turbo_v2_5")
             audio_bytes = b"".join(audio)
             return base64.b64encode(audio_bytes).decode('utf-8')
         except Exception as e:
@@ -74,11 +74,10 @@ def _emit_realtime_sync(text):
     socketio.emit('realtime', {'text': text})
 
 def create_recorder():
-    from RealtimeSTT import AudioToTextRecorder
     config = {
         'spinner': False,
         'use_microphone': False,
-        'model': 'large-v3',
+        'model': 'base',
         'language': 'ar',
         'silero_sensitivity': 0.4,
         'webrtc_sensitivity': 2,
@@ -87,7 +86,8 @@ def create_recorder():
         'min_gap_between_recordings': 0,
         'enable_realtime_transcription': True,
         'realtime_processing_pause': 0.8,
-        'realtime_model_type': 'large-v3',
+
+        'realtime_model_type': 'base',
         'on_realtime_transcription_stabilized': on_realtime,
     }
     return AudioToTextRecorder(**config)

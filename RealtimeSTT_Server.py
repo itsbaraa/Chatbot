@@ -52,7 +52,7 @@ if __name__ == '__main__':
     recorder_config = {
         'spinner': False,
         'use_microphone': False,
-        'model': 'large-v3',
+        'model': 'base',
         'language': 'ar',
         'silero_sensitivity': 0.6,
         'webrtc_sensitivity': 1,
@@ -61,7 +61,8 @@ if __name__ == '__main__':
         'min_gap_between_recordings': 0,
         'enable_realtime_transcription': True,
         'realtime_processing_pause': 0.8,
-        'realtime_model_type': 'large-v3',
+
+        'realtime_model_type': 'base',
         'on_realtime_transcription_stabilized': text_detected,
     }
 
