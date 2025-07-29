@@ -37,15 +37,17 @@ Before setting up the project, ensure you have the following:
 
 
 ## Setup
-1- Clone the repository
+1- Clone the repository.
 
-2- install the required libraries: `pip install -r requirements.txt`
+2- install the required libraries: `pip install -r requirements.txt`.
 
-3- Insert the Cohere and ElevenLabs API keys in `Chatbot.py` (I added a demo API keys for testing)
+3- Insert the Cohere and ElevenLabs API keys in `Chatbot.py`. (I added a demo API keys for testing)
 
-4- Run the real-time speech-to-text server: `python RealtimeSTT_Server.py`
+4- Run the real-time speech-to-text server: `python RealtimeSTT_Server.py`.
   
-5- Run the chatbot frontend: `python Chatbot.py` 
+5- Run the chatbot frontend: `python Chatbot.py`.
+
+6- Navigate to `http://127.0.0.1:5000` to use the chatbot.
 
 ## Showcase
 
